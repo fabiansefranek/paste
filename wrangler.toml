@@ -1,0 +1,6 @@
+name = "paste"
+main = "index.js"
+kv_namespaces = [
+  { binding = "PASTE_DB", id = "<KV_ID>" }
+]
+

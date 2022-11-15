@@ -1,0 +1,12 @@
+{
+  "name": "paste",
+  "version": "0.0.0",
+  "devDependencies": {
+    "wrangler": "2.1.15"
+  },
+  "private": true,
+  "scripts": {
+    "start": "wrangler dev",
+    "deploy": "wrangler publish"
+  }
+}
