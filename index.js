@@ -11,7 +11,7 @@ function renderHTML(paste) {
     const icon = "%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='currentColor' stroke-width='2' stroke-linecap='round' stroke-linejoin='round' class='feather feather-clipboard'%3E%3Cpath d='M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2'%3E%3C/path%3E%3Crect x='8' y='2' width='8' height='4' rx='1' ry='1'%3E%3C/rect%3E%3C/svg%3E"
     const readOnly = (paste.text) ? 'readonly' : '';
     const pasteText = (paste.text) ? paste.text : '';
-    const pasteTitle = (paste.title) ? paste.title : '';
+    const pasteTitle = (paste.title) ? escape(paste.title) : '';
     const pasteSize = (paste.text) ? (paste.text.length / 1000).toFixed(2) : '';
     const country = (pasteText) ? new Intl.DisplayNames(['en'], {type: 'region'}).of(paste.country) : '';
     const timeZone = (pasteText) ? paste.timezone : '';
